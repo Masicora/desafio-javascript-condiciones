@@ -1,13 +1,13 @@
-
-// Francisco aquí te pido que me ayudes... Intenté definir variables para cada getElementById pero al hacerlo, y luego definir sum = input1 + input2 + input3, el código no reconoce los valores ingresados y la suma queda igual a cero...
 function verify() {
-    if (
-        document.getElementById("input1").valueAsNumber + document.getElementById("input2").valueAsNumber + document.getElementById("input3").valueAsNumber <= 10
-    ) {
-        document.getElementById("info").innerHTML = `Llevas ${document.getElementById("input1").valueAsNumber + document.getElementById("input2").valueAsNumber + document.getElementById("input3").valueAsNumber} stickers`;
+    let input1 = Number(document.getElementById("input1").value);
+    let input2 = Number(document.getElementById("input2").value);
+    let input3 = Number(document.getElementById("input3").value);
+    let info = document.getElementById("info");
+    if (input1 + input2 + input3 <= 10) {
+        info.innerHTML = `Llevas ${input1 + input2 + input3} stickers`;
     }
     else {
-        document.getElementById("info").innerHTML = "¡Llevas demasiados stickers!";
+        info.innerHTML = "¡Llevas demasiados stickers!";
     }
 }
 
